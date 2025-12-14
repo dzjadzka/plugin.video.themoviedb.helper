@@ -6,6 +6,8 @@
 
 See [TMDbHelper Wiki](https://github.com/jurialmunkey/plugin.video.themoviedb.helper/wiki) for usage
 
+**For developers:** See [API_DOCUMENTATION.md](API_DOCUMENTATION.md) for comprehensive integration guide
+
 
 
 ## Installation 
