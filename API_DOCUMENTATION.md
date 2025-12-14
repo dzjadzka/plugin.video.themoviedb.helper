@@ -494,6 +494,8 @@ TMDb Helper can create and maintain a Kodi video library with strm files.
 
 ### Library STRM Format
 
+TMDb Helper creates STRM files that point to the plugin for playback. The `islocal=True` parameter indicates the content is part of the Kodi library, which affects metadata handling and player selection behavior.
+
 **Movies:**
 ```
 plugin://plugin.video.themoviedb.helper/?info=play&tmdb_id={tmdb_id}&tmdb_type=movie&islocal=True
@@ -503,6 +505,11 @@ plugin://plugin.video.themoviedb.helper/?info=play&tmdb_id={tmdb_id}&tmdb_type=m
 ```
 plugin://plugin.video.themoviedb.helper/?info=play&tmdb_id={tmdb_id}&tmdb_type=tv&season={season}&episode={episode}&islocal=True
 ```
+
+The `islocal=True` parameter is recommended for library items as it:
+- Enables proper library integration
+- Affects watched status synchronization
+- Influences player selection priority
 
 ### Library Paths
 
@@ -566,10 +573,11 @@ TMDb Helper integrates with multiple external APIs:
 **Features:**
 - Additional TV show metadata
 - Episode information
-- Awards data
+- Awards data (TVDb subscription required)
 - Genre classifications
+- Extended episode details (TVDb subscription may be required for some data)
 
-**Note:** Some features require TVDb subscription
+**Note:** Some advanced features and higher API rate limits require a TVDb subscription. Basic metadata is available without subscription. See https://thetvdb.com/subscribe for details.
 
 ### OMDb (Open Movie Database)
 
